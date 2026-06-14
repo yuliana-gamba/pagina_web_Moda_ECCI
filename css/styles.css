@@ -1,0 +1,101 @@
+/* Importamos fuentes: Playfair (titulares de revista de moda) y Roboto (cuerpos de texto) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    
+    --pantone-magenta: #BE3455; 
+    --pantone-scuba: #00ABC0;   
+    --pantone-egret: #F6F3EB;   
+    --pantone-ink: #1A1A24;     
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--pantone-egret);
+    color: var(--pantone-ink);
+}
+
+/* Tipografía de alto impacto para títulos */
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+
+.bg-dark {
+    background-color: var(--pantone-magenta) !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.navbar-dark .navbar-nav .nav-link:hover, 
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #FFD1DC !important; 
+}
+
+
+.bg-light {
+    background-color: #FFFFFF !important; 
+}
+
+
+.border-primary {
+    border-color: var(--pantone-magenta) !important;
+    border-width: 2px;
+}
+.text-primary {
+    color: var(--pantone-magenta) !important;
+}
+
+
+.border-success {
+    border-color: var(--pantone-scuba) !important;
+    border-width: 2px;
+}
+.text-success {
+    color: var(--pantone-scuba) !important;
+}
+.btn-success {
+    background-color: var(--pantone-scuba) !important;
+    border-color: var(--pantone-scuba) !important;
+    color: #FFFFFF !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px; 
+}
+.btn-success:hover {
+    background-color: #008A99 !important; 
+    box-shadow: 0 4px 15px rgba(0, 171, 192, 0.4);
+}
+.bg-success {
+    background-color: var(--pantone-scuba) !important;
+}
+
+
+.card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(190, 52, 85, 0.15) !important;
+}
+
+
+.accordion-button:not(.collapsed) {
+    color: var(--pantone-magenta);
+    background-color: rgba(190, 52, 85, 0.1); 
+    font-weight: bold;
+}
+
+.accordion-button:focus {
+    border-color: var(--pantone-magenta);
+    box-shadow: 0 0 0 0.25rem rgba(190, 52, 85, 0.25);
+}
+
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Experiencia - Moda ECCI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Moda ECCI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="experiencia.html">Mi Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glosario.html">Glossary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sostenibilidad.html">Sostenibilidad</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 flex-grow-1">
+        <div class="container">
+            <h2 class="text-center mb-5">Mi experiencia en Moda ECCI</h2>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title">Aprendizajes y Reflexión</h5>
+                            <p class="card-text">Durante la conferencia de Sara Viloria, aprendí sobre la conexión entre la industria creativa y el desarrollo de software, comprender la semiología del color y el uso de Pantone nos permite a los desarrolladores FrontEnd, me llamo la atención el cómo crear interfaces digitales comunican de manera efectiva la identidad gráfica de un producto, luego de terminar la conferencia tuvimos un momento agradable con mi grupo y con la conferencista donde nos tomamos una foto de recuerdo, después tuvimos la oportunidad de recorrer los estands de moda que estaban organizados por la universidad, recorrí las mayorías y pude apreciar el esfuerzo y talento de cada participante de los estands, es muy interesante darme cuenta que temas alejados de mi formación me pueden ayudar y complementar en mi proceso, esta experiencia vivida fue muy grata y maravillosa y enriquecedora de conocimientos que me enseñan cada día y también es gracias al Sena por permitir estos eventos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm bg-light border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Learnings and Reflection</h5>
+                            <p class="card-text">During Sara Viloria's conference, I learned about the connection between the creative industry and software development. Understanding color semiotics and the use of Pantone allows us, as Front-End developers, to learn how creating digital interfaces effectively communicates a product's graphic identity. After the conference, my group and I enjoyed a pleasant moment together with the speaker, taking a commemorative photo. Then, we had the opportunity to visit the fashion booths organized by the university. I explored most of them and appreciated the effort and talent of each participant. It's very interesting to realize that topics outside my field of study can help and complement my learning process. This experience was very pleasant, wonderful, and enriching, providing me with the knowledge I learn every day. Thanks also to SENA for making these events possible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="mb-4 text-center">Contenido Multimedia</h4>
+            
+            <div class="row g-3 justify-content-center" id="galeriaFotos">
+                </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <p class="mb-0">© 2026 Evento Moda ECCI - SENA.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const contenedorGaleria = document.getElementById("galeriaFotos");
+            let fotosHTML = '';
+            const totalFotos = 39;
+
+            for (let i = 1; i <= totalFotos; i++) {
+                // Notarás que la ruta es ../img/fotoX.jpeg porque estamos dentro de 'secciones'
+                fotosHTML += `
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="../img/foto${i}.jpeg" class="card-img-top rounded" alt="Experiencia Moda ECCI ${i}" style="height: 200px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x200?text=Falta+foto${i}.jpeg'">
+                    </div>
+                </div>`;
+            }
+
+            contenedorGaleria.innerHTML = fotosHTML;
+        });
+    </script>
+</body>
+</html>
